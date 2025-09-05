@@ -1,0 +1,28 @@
+resilience4j:
+    circuitbreaker:
+        instances:
+            orderService:
+               registerHealthIndicator: true
+               slidingWindowSize: 10
+               minimumNumberOfCalls: 5
+               failureRateThreshold: 50
+               waitDurationInOpenState: 10s
+               permittedNumberOfCallsInHalfOpenState: 3
+    retry:
+      instances:
+        orderService:
+             waitDuration: 2s
+server:
+     port: 8092
+spring:
+    application:
+         name: order-service
+eureka:
+   client:
+       service-url:
+            defaultZone: http://localhost:8762/eureka/
+management:
+      endpoints:
+              web:
+               exposure:
+                 include: "*"
