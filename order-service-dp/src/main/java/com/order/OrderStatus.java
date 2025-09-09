@@ -1,0 +1,4 @@
+package com.order;
+public enum OrderStatus {
+    CREATED, PAYMENT_PENDING, PAYMENT_CONFIRMED, PAYMENT_FAILED, CANCELLED
+}
