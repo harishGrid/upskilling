@@ -1,0 +1,5 @@
+id,name,email
+1,john doe,john.doe@example.com
+2,jane smith,jane.smith@example.com
+3,peter jones,invalid-email
+4,susan white,susan.white@example.com
